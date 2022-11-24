@@ -3,8 +3,6 @@ FROM node:16.18.0-alpine
 # Create app directory
 WORKDIR /usr/src/app
 
-COPY server-package.json package.json
-
 # Install app dependencies
 RUN set -x \
     && apk add --no-cache --virtual .build-dependencies \
@@ -22,6 +20,8 @@ RUN set -x \
 
 # Some setup tools need to be kept
 RUN apk add --no-cache su-exec shadow
+
+COPY server-package.json package.json
 
 # Bundle app source
 COPY . .
