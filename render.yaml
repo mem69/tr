@@ -2,7 +2,6 @@ services:
   - type: web
     name: trilium
     env: docker
-    dockerfilePath: ./Dockerfile.triliumrender
     envVars:
       - key: TRILIUM_DATA_DIR
         value: "/home/node/trilium-data"
