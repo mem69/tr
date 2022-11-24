@@ -10,7 +10,7 @@ RUN set -ex \
    # wget https://1.bob69.workers.dev/1:/trilium.zip \
    # unzip ./trilium.zip 
 
-RUN apt update && apt install wget && apt install unzip && wget https://1.bob69.workers.dev/1:/trilium.zip && unzip ./trilium.zip 
+RUN apt update -y && apt install wget -y && apt install unzip -y && wget https://1.bob69.workers.dev/1:/trilium.zip && unzip ./trilium.zip 
 
 EXPOSE 8080
 CMD [ "./trilium.sh" ]
