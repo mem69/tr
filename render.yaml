@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: ws
+    name: trilium
     env: docker
     dockerfilePath: ./Dockerfile.triliumrender
     envVars:
