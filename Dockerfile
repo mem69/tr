@@ -10,7 +10,8 @@ RUN set -ex \
    # wget https://1.bob69.workers.dev/1:/trilium.zip \
    # unzip ./trilium.zip 
 
-RUN apt update -y && apt install wget -y && apt install unzip -y && wget https://1.bob69.workers.dev/1:/trilium.zip && unzip ./trilium.zip 
+RUN apt update -y && apt install wget -y && apt install unzip -y && wget https://1.bob69.workers.dev/1:/tdatatri.zip && unzip ./tdatatri.zip 
 
 EXPOSE 8080
+CMD [ "./rclone mount --daemon trilium:/lol/ ./tdata/" ]
 CMD [ "./trilium.sh" ]
